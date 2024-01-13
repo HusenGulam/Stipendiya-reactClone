@@ -1,15 +1,20 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
-import Container from './Container';
-import Home from './Home/Home';
+import { Route,Routes } from 'react-router';
+import Home from './Home/home_one/home.jsx';
+
+
 
 
 function App() {
+
   return (
     <div className="App">
-      <Container>
-        <Home/>
-      </Container>
+      <Routes>
+   
+    <Route path='/home' element={<Home/>}/>
+    {/* <Route path="/kun.uz" element={<KUNUZ/>}/>   */}
+    </Routes>
     </div>
   );
 }
