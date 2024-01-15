@@ -7,9 +7,11 @@ import i18next from 'i18next';
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 
-<BrowserRouter>
-  <App/>
-</BrowserRouter>
+
+  <BrowserRouter>
+      <App/>
+  </BrowserRouter>
+
  
 );
 

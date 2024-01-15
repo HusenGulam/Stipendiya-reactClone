@@ -13,12 +13,19 @@
     flex-direction: column;
     /* background: pink; */
 }
+#one_id{
+    color: white;
+}
+#ariza{
+    color: white;
+}
 .six_div_open1{
     width: 100%;
     height: 105vh;
     display: flex;
     align-items: end;
     justify-content: center;
+ 
     /* background: peru; */
 }
 .container{
@@ -28,11 +35,13 @@
 }
 nav{
     width: 100%;
-    height: 70px;
-    /* border: 3px solid red; */
+ 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    top: 40px;
+    border: 1px solid red
 }
  .smal_picture1{
     width: 350px;

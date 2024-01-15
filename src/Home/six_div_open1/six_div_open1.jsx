@@ -1,4 +1,5 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import "./six_div_open1.css";
 import "./six_div_open1.-responsive.css";
 import 'boxicons';
@@ -10,6 +11,29 @@ import img2 from "./img/info_section_logo.d752b88.png"
 
 
 function Six_div_open1(){
+  const [count,setCount] = useState(0)
+  const [timer,setTimer] = useState(0)
+
+    useEffect(() => {
+      if(timer < 1450){
+        setTimeout(() => {
+          setTimer(timer +1);
+        },100000)
+      }
+    
+    },[timer])
+
+    const handleClick = (e) =>{
+      if(count <= 1){
+         setCount(count +1)
+      }
+      else{
+         e.preventDefault()
+      }
+    }
+
+   
+  
     return(
         <div className="six_div_open1">
 
@@ -22,7 +46,7 @@ function Six_div_open1(){
         </div>
         <h1>stipendiya.edu.uz</h1>
         </div>
-        <button>ONE ID orqali kirish</button>
+        <button><a href="https://id.egov.uz/" target="_blank" id="one_id">ONE ID orqali kirish</a></button>
         </nav>
         <div className="center_message_and_picture">
         <div className="message_picture1">
@@ -37,8 +61,8 @@ function Six_div_open1(){
         </div><br />
         {/* keyfrems */}
         <p>Talabalar va doktorantlar uchun davlat stipendiyalariga onlayn ariza yuborish portali</p><br /><br />
-        <button>Ariza topshirish <box-icon name='right-arrow-alt' color='#ffffff' ></box-icon></button><br /><br /><br />
-        <div className="for_number">1.434 <br />Jamiarizalar soni</div>
+        <button onClick={handleClick}><a href="https://lex.uz/docs/-4725554" id="ariza" target="_blank">Ariza topshirish </a><box-icon name='right-arrow-alt' color='#ffffff' ></box-icon></button> <br /><br /><br />
+        <div className="for_number">Jamiarizalar soni: <p id="time">{timer}</p>{count}</div>
         </div>
         <div className="message_picture2"><img src={img2}/></div>
         </div>
